@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+
+      <form method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" class="save btn btn-default">Simulate</button>
+      </form>
+
+
+
+
+{% autoescape off %}
+<div>{{ RES }}</div>
+{% endautoescape %}
+
+<h2>Waiting time of the customers in the line sorted by arrival time</h2>
+<p></p>
+<ol>
+
+            {% for i in xyz %}
+              <li>{{ i }} minutes</li>
+            {% endfor %}
+</ol>
+
+
+
+{% endblock %}

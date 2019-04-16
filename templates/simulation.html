@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>Welcome to Business Modeling Web Site!</h1>
+
+    <h2>you can start your simulation here</h2>
+
+
+    <form method="POST" class="post-form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+
+
+
+{% endblock %}

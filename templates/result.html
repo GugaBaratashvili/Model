@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+        <h1 class='posttitle loader'>{{ post.User }}</h1>
+
+
+
+      <p class='postcontent' >{{ post.num3|safe|linebreaksbr }}</p>
+
+      <p>This is your result: {{ Numsum.num3 }}</p>
+
+{% endblock %}
